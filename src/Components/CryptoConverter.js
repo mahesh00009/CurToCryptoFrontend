@@ -119,12 +119,14 @@ const CryptoConverter = () => {
               </Row>
             </Form>
 
+
+              
             <div className="converted-amount mt-3">
               <h4 className="text-center">Converted Amount:</h4>
               {loading ? (
                 <Spinner animation="border" variant="primary" />
               ) : (
-                <p className="text-center">{`${convertedAmount} ${symbol}`}</p>
+                convertedAmount && <p className="text-center">{`${convertedAmount} ${convert}`}</p>
               )}
             </div>
           </div>
